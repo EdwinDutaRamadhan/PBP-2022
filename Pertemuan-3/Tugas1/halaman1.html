@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{display:flex;}
+        .container{width: 25%;margin: 5px;height: 500px;}
+        .container2{width: 50%;margin: 5px;height: 300px;}
+        .card{background-color: aqua;height: 300px;}
+        th, td{padding : 10px;text-align: left;}
+        h3{text-align: center;}
+        li{list-style: none;}
+        tbody{max-width: 33%;}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="container"></div>
+        <div class="container2">
+            <div class="card">
+                <h3>Registrasi</h3>
+                <form action="halaman2.php" method="post">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <label for="username">Username</label>
+                                </th>
+                                <td>
+                                   
+                                    <input type="text" name="username" placeholder="Username" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="password">Password</label></th>
+                                <td>
+                                    
+                                    <input type="password" name="password" placeholder="Password" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="jenis-kelamin">Jenis Kelamin : </label>
+                                </th>
+                                <td>
+                                    <input type="radio" name="jenis-kelamin" value="laki-laki" id="laki-laki" required>
+                                    <label for="laki-laki">Laki-laki</label>
+                                    <input type="radio" name="jenis-kelamin" value ="perempuan" id="perempuan" required>
+                                    <label for="perempuan">Perempuan</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="pekerjaan">Pekerjaan : </label>
+                                </th>
+                                <td>
+                                    <select name="pekerjaan" required id="jenisKelamin">
+                                    <option value="Null">Pilih satu</option>
+                                        <option value="Mahasiswa">Mahasiswa</option>
+                                        <option value="Asisten-Dosen">Asisten-Dosen</option>
+                                        <option value="Dosen">Dosen</option>
+                                        <option value="Karyawan">Karyawan</option>
+                                        <option value="Wiraswasta">Wiraswasta</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+
+                                </th>
+                                <td>
+                                    <br>
+                                    <input type="submit" value="Submit">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="container"></div>
+    </div>
+</body>
+</html>
