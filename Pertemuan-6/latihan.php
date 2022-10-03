@@ -60,27 +60,27 @@
         <br>
         <?php if(isset($_POST["submit"])):?>
             <?php if(isset($_POST["search"])): ?>
-                <?php $search = $_POST["search"];?>
-            <?php foreach($data as $dat) :  ?>
-                <?php if($dat['nim'] == $search): ?>
-                    <tr>
-                        <td><?= $dat['no']; ?></td>
-                        <td><?= $dat['nim']; ?></td>
-                        <td><?= $dat['nama']; ?></td>
-                        <td><?= $dat['ipk']; ?></td>
-                    </tr>
-                <?php endif; ?>  
-            <?php endforeach; ?>
-            <?php if($_POST["search"]== ''): ?>
+            <?php $search = $_POST["search"];?>
                 <?php foreach($data as $dat) :  ?>
-                    <tr>
-                        <td><?= $dat['no']; ?></td>
-                        <td><?= $dat['nim']; ?></td>
-                        <td><?= $dat['nama']; ?></td>
-                        <td><?= $dat['ipk']; ?></td>
-                    </tr>
-            <?php endforeach; ?>
-            <?php endif; ?>
+                    <?php if($dat['nim'] == $search): ?>
+                        <tr>
+                            <td><?= $dat['no']; ?></td>
+                            <td><?= $dat['nim']; ?></td>
+                            <td><?= $dat['nama']; ?></td>
+                            <td><?= $dat['ipk']; ?></td>
+                        </tr>
+                    <?php endif; ?>  
+                <?php endforeach; ?>
+                <?php if($_POST["search"]== ''): ?>
+                    <?php foreach($data as $dat) :  ?>
+                        <tr>
+                            <td><?= $dat['no']; ?></td>
+                            <td><?= $dat['nim']; ?></td>
+                            <td><?= $dat['nama']; ?></td>
+                            <td><?= $dat['ipk']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             <?php endif; ?>
         <?php else : ?>
             <?php foreach($data as $dat) :  ?>
