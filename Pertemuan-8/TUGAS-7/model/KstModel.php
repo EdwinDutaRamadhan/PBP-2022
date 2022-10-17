@@ -1,6 +1,6 @@
 <?php
 class KstModel{
-    public $dumpKst = [
+    private $dumpKst = [
         [
             'kode' => '001',
             'hari' => 'Senin',

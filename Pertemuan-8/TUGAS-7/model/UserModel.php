@@ -1,13 +1,20 @@
 <?php
 class UserModel{
-    public $dumpAcc = [
+    private $dumpAcc = [
         [
-            'nim' => '672020272',
+            'nim' => 672020272,
+            'nama' => 'Edwin',
             'pass' => 'edwin'
         ],
         [
-            'nim' => '671945272',
+            'nim' => 602000100,
+            'nama' => 'Duta',
             'pass' => 'duta'
+        ],
+        [
+            'nim' => 672040100,
+            'nama' => 'Ramadhan',
+            'pass' => 'ramadhan'
         ]
     ];
     public $userLogin;
@@ -17,6 +24,7 @@ class UserModel{
             if($acc['nim'] == $nim){
                 $this->userLogin['nim'] = $acc['nim'];
                 $this->userLogin['pass'] = $acc['pass'];
+                $this->userLogin['nama'] = $acc['nama'];
             }
         }
         return $this->userLogin;
@@ -29,9 +37,10 @@ class UserModel{
                 if($acc['pass'] == $pass){
                     //nim dan password sesuai data
                     return true;
+                    exit;
                 }
             }
-            return false;
         }
+        return false;
     }
 }

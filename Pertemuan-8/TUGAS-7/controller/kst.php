@@ -1,8 +1,12 @@
 <?php
     include '../model/KstModel.php';
+    include '../model/UserModel.php';
     $model = new KstModel();
     $data = $model->getAll_KST();
 
+    session_start();
+    $userModel = new UserModel();
+    $userData = $userModel->getNama_nim($_SESSION['nim']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +17,8 @@
     <title>Kartu Studi Tetap</title>
 </head>
 <body>
+    <p>Kartu Studi Tetap</p>
+    <h3><?= $userData['nim'].' | '.$userData['nama']; ?></h3>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>Kode</th>
